@@ -1,0 +1,539 @@
+/*Created on 12-15-22*/
+/*Lets use vmax as the size unit to preserve website responsiveness when page size change*/
+/*I use id in most cases specially if the section is unique*/
+/*Use the articlecontainer class to implement same layout as the homepage as well as the custom font*/
+/*vertical = patayo, horizontal = pahiga*/
+@font-face {
+  font-family: brand;
+  src: url(/css/font/upheavtt.ttf);
+}
+
+@font-face {
+  font-family: nav;
+  src: url(/css/font/SourceSansPro-Black.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 1.5vmin;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0f4c81a9;
+}
+
+a:visited { /*Prevent link color change*/
+  color: #0f4c81;
+}
+
+a:link { /*Remove link underline*/
+  text-decoration: none; 
+}
+
+html { /*Smooth scrolling when clicked on feature bar*/
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1b262c;
+  font-family: sans-serif;
+}
+
+/*HOMEPAGE*/
+
+#homecover {
+  height: 41vmax;
+  background-image: url(/css/images/main.jpg);
+  background-size: cover; /*Keep image in full size*/
+  background-position-y: center;
+}
+
+header {
+  height: 4vmax;
+  display: flex; /*Align elements horizontally*/
+  justify-content: space-between; /*Put space between h1 and nav*/
+  align-items: center; /*Align center of vertical*/
+  padding-inline: 1.5vmax; /*Add padding in left and right of header*/
+  background-color: #1b262cde;
+  font-family: brand; /*Use of custom font*/
+  font-size: 1.4vmax;
+  color: #0f4c81;
+}
+
+header nav ul {
+  display: flex; /*group li horizontally*/
+  list-style: none; /*Remove list bullets*/
+}
+
+header button {
+  height: 4vmax;
+  width: 6vmax;
+  border: none; /*Remove ugly border*/
+  background-color: rgba(0, 0, 0, 0);
+  font-family: nav;
+  font-size: 1.2vmax;
+  color: #0f4c81;
+}
+
+header button:hover { /*Hover take effect when cursor is in the element so we making effect when being pointed*/
+  cursor: pointer; /*Change pointer to hand*/
+  transition: 0.2s;
+  border-bottom: 0.25vmax solid white; /*Add little white bottom border*/
+  background-color: #0f4c81;
+  color: #1b262c;
+}
+
+#homeintro {
+  width: 60%;
+  padding-top: 8vmax; /*Add space between header and homeintro*/
+  margin: auto; /*Make all margin equal on both side to make it center*/
+  text-align: center;
+  font-size: 1.3vmax; /*h2 Welcome greeting use this size*/
+  color: white;
+}
+
+#homeintro h2 {
+  font-family: nav;
+  font-size: 2vmax;
+}
+
+#homeintro span {
+  font-family: brand;
+  font-size: 2.8vmax;
+  color: #1b262c;
+}
+
+#homeintro p {
+  font-size: 1.2vmax;
+}
+
+#homeintro button {
+  width: 7vmax;
+  height: 3vmax;
+  margin-top: 2vmax; /*Add space between p and button*/
+  border-radius: 0.5vmax;
+  border: none;
+  background-color: #1b262c;
+  font-family: nav;
+  font-size: 1.1vmax;
+  color: #0f4c81;
+}
+
+#homeintro button:hover {
+  cursor: pointer;
+  transition: 0.4s;
+  border-bottom: 0.2vmax solid white;
+  background-color: #0f4c81;
+  color: #1b262c;
+}
+
+#featurebar ul {
+  display: flex; /*group li horizontally and I will not repeat this*/
+  justify-content: center; /*align group of li center of vertical*/
+  list-style: none;
+  margin: 1.5vmax;
+}
+
+#featurebar button {
+  height: 3vmax;
+  width: 8vmax;
+  border: none;
+  background-color: #0f4c81b9;
+  font-family: nav;
+  font-size: 1.1vmax;
+  color: #1b262c;
+}
+
+#featurebar .btn1 button { /*Specific border radius effect for the first feature topic*/
+  border-top-left-radius: 0.4vmax;
+  border-bottom-left-radius: 0.4vmax;
+}
+
+#featurebar .btn2 button { /*Specific border radius effect for the last feature topic*/
+  border-top-right-radius: 0.4vmax;
+  border-bottom-right-radius: 0.4vmax;
+}
+
+#featurebar button:hover {
+  cursor: pointer;
+  transition: 0.2s;
+  border-bottom: 0.2vmax solid white;
+  background-color: #1b262c;
+  color: #0f4c81;
+}
+
+#featurecontainer .images {
+  height: 45vmax; /*Ideal height to hide the other images*/
+  text-align: center; /*Align images center of horizontal*/
+  overflow: hidden; /*Hide images that is more the the height*/
+}
+
+#featurecontainer .images:nth-child(2) div {
+  margin-bottom: 4vmax; /*specific first div from class images will have margin at bottom to prevent other feature topic from showing*/
+}
+
+#featurecontainer .images img {
+  width: 21vmax; /*attributes of feature images*/
+  height: 21vmax;
+  border-radius: 0.4vmax;
+  background-size: cover;
+}
+
+/*#featurecontainer .images a { Don't touch this code. Under Development!!!
+  position: relative;
+}
+
+#featurecontainer .images a span { 
+  display: none;
+  position: absolute;
+  bottom: 0.3vmax;
+  padding-inline: 8.65vmax;
+  background-color: #151c1fde;
+  font-family: nav;
+  font-size: 1.5vmax;
+  color: #0f4c81;
+}*/
+.articlecontainer {
+  padding: 2vmax; /*Add padding before h1 LATEST ARTICLE*/
+  background-color: #151c1f;
+  color: white;
+}
+.articlecontainer h1 {
+  margin-left: 4vmax; /*Add margin from left to align to the box*/
+  font-family: nav;
+  font-size: 2.3vmax;
+}
+.articlecontainer a:visited {
+  color: white; /*Prevent Article Title from color change*/
+}
+.articlecontainer article {
+  display: flex; /*I already explain this previously*/
+  width: 84vmax;
+  margin-inline: auto; /*Add an equal margin in the box containing article in left and right to make it center*/
+  margin-block: 2vmax; /*Add a margin between box of article*/
+  padding: 1.8vmax; /*Add a padding between edge of box and text*/
+  border-radius: 0.4vmax;
+  background-color: #0f4c81b9;
+  font-size: 1.1vmax;
+}
+
+.articlecontainer article img {
+  width: 8vmax;
+  height: 8vmax;
+  border-radius: 0.5vmax;
+  background-size: cover;
+}
+
+.articlecontainer article section {
+  padding-left: 4vmax; /*Add space between image and text*/
+}
+
+.articlecontainer article section a {
+  width:min-content;
+}
+
+footer {
+  height: 2.5vmax;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(37, 37, 37);
+  font-size: 1vmax;
+  color: white;
+}
+
+/*EXPLORE*/
+
+#explorecover {
+  height: 40vmax;
+  background-image: url('../css/images/explorerer.jpg');
+  background-size: cover;
+  background-position-y: center;
+}
+
+#explorecover .row {
+  display: flex;
+  align-items: center;
+  padding-left: 4vmax;
+  padding-top: 12vmax;
+}
+
+#explorecover .col {
+  flex-basis: 50%;
+}
+
+#explorecover .col h1 {
+  font-family: nav;
+  font-size: 3vmax;
+  color: #1b262c;
+  margin-bottom: 1.5vmax;
+}
+
+#explorecover .col p {
+  text-align: justify;
+  font-size: 1.1vmax;
+  color: whitesmoke;
+}
+
+#explorecover .card {
+  position: absolute;
+  width: 15vmax;
+  height: 15vmax;
+  padding: 15px;
+  box-sizing: border-box;
+  background-position: center;
+  background-size: cover;
+  
+  border-radius: 0.6vmax;
+}
+
+#explorecover h5 {
+  font-family: nav;
+  color: #0f4c81;
+  font-size: 1vmax;
+  padding-bottom: 0.5vmax;
+}
+
+#explorecover .card p {
+  text-align: left;
+  font-size: 0.8vmax;
+}
+
+#explorecover .card1 {
+  background-image: url('../css/images/First_Image_Blackhole.jpg');
+  left: 60vmax;
+  top: 8vmax;
+}
+
+#explorecover .card2 {
+  background-image: url('../css/images/Mars_Rover.jpg');
+  left: 60vmax;
+  top: 26vmax;
+}
+
+#explorecover .card3 {
+  background-image: url('../css/images/Earthrise.jpg');
+  left: 78vmax;
+  top: 8vmax;
+}
+
+#explorecover .card4 {
+  background-image: url('../css/images/Bootprint.jpg');
+  left: 78vmax;
+  top: 26vmax;
+}
+
+#explorecover .card:hover {
+  transition: 0.4s;
+  transform: translateY(-0.7vmax);
+}
+
+#explorecontainer {
+  padding-block: 3vmax;
+  color: white;
+}
+
+#explorecontainer img {
+width: 21vmax;
+height: 21vmax;
+background-size: cover;
+background-position: center;
+}
+
+#explorecontainer .popup {
+float: left;
+margin: 0.7vmax;
+}
+
+#explorecontainer .popup .content{
+position:absolute;
+top: 65vmax;
+left: 50vmax;
+transform: translate(-50%, -50%) scale(0);
+background: #0f4c81;
+width: 30vmax;
+height: 25vmax;
+z-index:2;
+text-align:justify;
+border-radius: 0.7vmax;
+padding: 2vmax;
+}
+
+#explorecontainer .content {
+font-size: 1vmax;
+}
+
+#explorecontainer .content h1 {
+margin-bottom: 1.5vmax;
+text-align: center;
+font-family: nav;
+}
+
+#explorecontainer .popup .closebtn {
+cursor: pointer;
+position:absolute;
+right: 1vmax;
+top: 1vmax;
+font-size: 2.5vmax;
+}
+
+#explorecontainer .popup.active .content {
+transition: all 0.3s ease-in-out;
+transform: translate(-50%, -50%) scale(1);
+}
+
+#explorecontainer .box {
+margin-left: 0.2vmax;
+margin-top: .5vmax;
+box-shadow: 1px 0 10px black;
+cursor: pointer;
+font-family: nav;
+font-size: 1vmax;
+}
+
+#explorecontainer .box:hover {
+transition: 0.5s;
+transform: translateY(-10px);
+}
+
+#explorecontainer .row2 {
+margin: 0.5vmax;
+}
+
+#explorearticles {
+  background-color:#151c1f;
+  padding-bottom: 1vmax;
+}
+
+#explorearticles .cover {
+  height: 20vmax;
+  display: flex;
+  margin-bottom: 1.5vmax;
+}
+
+#explorearticles .pic {
+margin-left: 6.5vmax;
+box-shadow: -1px 0 10px black;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+#explorearticles .pic h2 {
+padding-top: 0.3vmax;
+font-size: 1vmax;
+color:white;
+}
+
+#explorearticles .pic img {
+text-align: center;
+width: 24vmax;
+height: 16vmax;
+}
+
+#explorearticles h1 {
+margin-left: 4vmax;
+padding:2vmax;
+font-size: 2.5vmax;
+color:#0f4c81;
+}
+
+/*LATEST*/
+#latestcontainer {
+  padding: 2vmax;
+  background-color: #151c1f;
+  color: white;
+}
+#latestcontainer h1 {
+  margin-left: 4vmax; /*Add margin from left to align to the box*/
+  font-family: nav;
+  font-size: 2.3vmax;
+}
+#latestcontainer a:visited {
+  color: white; /*Prevent Article Title from color change*/
+}
+#latestcontainer article {
+  width: 84vmax;
+  height: 27vmax;
+  margin-inline: auto; /*Add an equal margin in the box containing article in left and right to make it center*/
+  margin-block: 2vmax; /*Add a margin between box of article*/
+  padding: 1.8vmax; /*Add a padding between edge of box and text*/
+  border-radius: 0.4vmax;
+  background-color: #0f4c81b9;
+  font-size: 1.1vmax;
+}
+
+/*ABOUT US*/
+#aboutcontainer {
+  padding: 2vmax; /*Add padding before h1 ABOUT US*/
+  background-color: #151c1f;
+  color: white;
+}
+
+#aboutcontainer h1 {
+  margin-left: 4vmax; /*Add margin from left to align to the box*/
+  font-family: nav;
+  font-size: 2.3vmax;
+}
+
+#aboutcontainer article {
+  width: 83vmax;
+  margin-inline: auto; /*Add an equal margin in the box containing article in left and right to make it center*/
+  margin-block: 2vmax; /*Add a margin between box of article*/
+  padding: 2.5vmax; /*Add a padding between edge of box and text*/
+  border-radius: 0.4vmax;
+  background-color: #0f4c81b9;
+}
+
+#aboutcontainer .aboutrow {
+  display: flex;
+}
+
+#aboutcontainer .aboutrow:nth-child(1) {
+  margin-bottom: 2vmax;
+}
+
+#aboutcontainer .aboutrow .brand {
+  padding-right: 6.2vmax;
+}
+
+#aboutcontainer .aboutrow h2 {
+  font-family: brand;
+  font-size: 2.8vmax;
+  color: #151c1f;
+}
+
+#aboutcontainer article img {
+  width: 10vmax;/*Change width*/
+  height: 10vmax;/*Change hight*/
+  border-radius: 0.5vmax;
+  background-size: cover;
+}
+
+#aboutcontainer article section {
+  padding-left: 2vmax;
+  padding-right: 3vmax;
+}
+
+#aboutcontainer article section a {
+  color:white;
+}
+
+#aboutcontainer .aboutrow h3 {
+  font-family: nav;
+  font-size: 1.7vmax;
+}
+
+#aboutcontainer .aboutrow p {
+  font-family: sans-serif;
+  font-size: 1.1vmax;
+}
+
+#aboutcontainer .aboutrow span {
+  font-size: 0.9vmax;
+  vertical-align:super;
+}
