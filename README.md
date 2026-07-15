@@ -4,7 +4,6 @@ A simple website that features space images and articles. Visitors can browse an
 ## Table of Contents
 - [Pages](#pages)
 - [License](#license)
-- [Acknowledgments](#acknowledgments)
 
 ## Pages
 ![home][home]
