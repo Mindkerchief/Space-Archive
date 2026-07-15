@@ -1,5 +1,5 @@
 # ![space archive thumbnail][space-archive-thumbnail] Space Archive ![space archive badge][space-archive-badge]
-A simple website that features space images and articles. Visitors can browse and enjoy the different celestial bodies gallery. Learn about the various phenomena in space. This is just a small website aiming to produce a beautifully designed website.
+A simple website that features space images and articles. Visitors can browse and enjoy the different images of celestial bodies and learn various phenomena in space.
 
 ## Table of Contents
 - [Pages](#pages)
@@ -22,9 +22,6 @@ A simple website that features space images and articles. Visitors can browse an
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
-- **[Visual Studio Code][visual-studio-code]**: For development environment.
-
 <!-- Reference -->
 [space-archive-thumbnail]: https://github.com/Mindkerchief/Space-Archive/assets/130748576/be1beeeb-bee4-4fb4-bff8-7eba5f6f6832
 [space-archive-badge]: https://img.shields.io/badge/Website-Space_Gallery-124069
@@ -33,5 +30,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 [gallery]: https://github.com/Mindkerchief/Space-Archive/assets/130748576/61b22dd8-4c70-493e-8b37-da51dd19b287
 [explore]: https://github.com/Mindkerchief/Space-Archive/assets/130748576/0b5cc04b-b1c5-41c3-8574-72daf0de1362
 [article]: https://github.com/Mindkerchief/Space-Archive/assets/130748576/41a102b6-6037-419a-8aca-343e91050011
-
-[visual-studio-code]: https://code.visualstudio.com/docs
